@@ -45,3 +45,36 @@ css와는 달리 위 문법처럼 들여쓰기로도 스타일 적용이 가능�
 위의 Sass문법에서 세미콜론 과 중괄호 와 같은 기존 CSS문법을 따라간것이 Scss이다.
 
 <img src="gitImages\Scss.jpg">
+
+## url처리
+
+기존의 css는 url을 직접 넣어주어야 했는데, Sass의 경우 변수로 선언하여 할당해줄 수 있다.
+
+```css
+$test_url: 'http://~~'
+
+@font
+    src: url("#{$test_url}")
+```
+
+위에 보는것과 같이 #{ $변수 } 로 선언해야함
+
+## 다양한 내장함수
+
+기존의 calc() 와 같은 css내장함수 뿐만 아니라 @use 를 사용한다면 Sass의 매우 많은 내장함수를 사용할 수 있음
+
+```css
+@use "sass:math"
+
+.test
+    $width: 800px
+    position:absolute
+    /* math.div = divide 즉 나누기를 뜻함 */
+    left: math.div($width,2);
+```
+
+이렇게 max() , min() 함수의 사용또한 가능함
+
+- ※ 내장함수는 앞에 $ 를 붙이지 않는다.
+
+<img src="gitImages\innerFunc.jpg">
