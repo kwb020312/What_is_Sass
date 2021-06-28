@@ -106,3 +106,27 @@ Sass는 일일히 따로 중첩하지 않아도 상위태그 아래로 들여쓰
 지금이야 별 차이가 없겠지만 문장이 길어진다면 매우 큰 차이가 있을 것 같다.
 
 - CSS가 더 보기 좋은 것 같은데..
+
+## 조건문
+
+Sass에서의 조건문은 중괄호로 감싸지 않고 인자로 전달하여 처리하는데, 인자의 첫번째 요소는 조건, 두번쨰 요소는 조건이 참일때, 세 번쨰 요소는 조건이 거짓일 때를 나타낸다
+
+<img src="gitImages\If.jpg">
+
+위 사진은 Sass에서 조건이 참이라면 색이 붉어지고 아니면 파래지는데,
+
+<img src="gitImages\if_css.jpg">
+
+조건식이 false이기 때문에 color:blue가 되었다.
+
+## 종속 스킵
+
+margin-top, margin-bottom과 같이 한 속성에서 여러갈래로 하이픈(-) 처리하여 나뉘는 요소를 Sass에선 쉽게 처리할 수 있는데,
+
+<img src="gitImages\-_attr_sass.jpg">
+
+위와같이 입력해주면 css반환으론
+
+<img src="gitImages\-_attr_css.jpg">
+
+위와같이 반환된다.
