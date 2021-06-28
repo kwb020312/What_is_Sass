@@ -17,6 +17,18 @@ CSS내에서 변수, 함수, 믹스인, 중첩 규칙 사용가능
 
 짧게 줄여 해당 두가지가 가장 큰 장점이라 볼 수 있다.
 
+## 설치방법
+
+```javascript
+npm i -g sass
+```
+
+이제 sass파일을 생성 후
+
+<img src="gitImages\Transfer_Sass.jpg">
+
+아래와 같이 입력해주면 sass파일이 css파일로 변환된다.
+
 ## 주석처리
 
 Sass에서도 다른 프로그래밍 언어와 같이 // 와 같은 한줄주석, /\* \*/ 와 같은 여러 줄 주석이 가능하다.
@@ -78,3 +90,19 @@ $test_url: 'http://~~'
 - ※ 내장함수는 앞에 $ 를 붙이지 않는다.
 
 <img src="gitImages\innerFunc.jpg">
+
+## 내부중첩
+
+Sass는 일일히 따로 중첩하지 않아도 상위태그 아래로 들여쓰여진 것들은 모두 상위태그를 가르키기 때문에
+
+<img src="gitImages\Sass_Include.jpg">
+
+위와 같이 입력하면
+
+<img src="gitImages\CSS_Include.jpg">
+
+이렇게 변환된다.
+
+지금이야 별 차이가 없겠지만 문장이 길어진다면 매우 큰 차이가 있을 것 같다.
+
+- CSS가 더 보기 좋은 것 같은데..
