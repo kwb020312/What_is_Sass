@@ -155,3 +155,34 @@ Sass에서 부모를 선택하는 부모선택자는 & 를 사용하는데,
 위의 Sass파일을 CSS로 변환시 아래와 같아짐
 
 <img src="gitImages\&Children.jpg">
+
+## 글로벌 변수
+
+Sass의 변수는 기본적으로 다른 Sass에서 긁어다 쓸 수 있는데 별도의 Exports 과정은 필요없고 원하는 Sass에서
+
+```css
+@use 'SassFileName';
+```
+
+선언을 하면 자연스럽게 mixin함수 혹은 변수를 사용할 수 있다.
+
+예를 들어 test.sass에서 black을 선언한다면
+
+<img src="gitImages\Export_Black.jpg">
+
+이후 test2.sass에서 import해온다
+
+<img src="gitImages\Import_Black.jpg">
+
+이후 test2를 css로 변경해준다면,
+
+<img src="gitImages\Export_Result.jpg">
+
+```css
+@use "sass:math"
+
+// 아래와 같은 내장함수를 수정할 수 없음.
+math.$pi: 0;
+```
+
+기본적으로 스타일 내부에서도 변수를 선언 및 변경이 가능한데, 기존의 자바스크립트 클로져 구조와 같은 구조를 갖는 전역, 지역 변수를 사용할 수 있다.
