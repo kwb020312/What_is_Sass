@@ -130,3 +130,28 @@ margin-top, margin-bottom과 같이 한 속성에서 여러갈래로 하이픈(-
 <img src="gitImages\-_attr_css.jpg">
 
 위와같이 반환된다.
+
+## 부모선택자
+
+Sass에서 부모를 선택하는 부모선택자는 & 를 사용하는데,
+
+예를들어
+
+```css
+.test
+    color: red
+
+    &_2
+        color: blue
+```
+
+를 변환하면 어떻게 될까??
+&는 자신을 .test로 취급하고 .test_2라는 Class에 color:blue라는 스타일이 입혀질 것이다.
+
+- ※ 주의 : Sass 속성 선택자(:) 뒤에는 반드시 공백이 필요하며 없을경우 오류를 발생시킴.
+
+<img src="gitImages\&Parent.jpg">
+
+위의 Sass파일을 CSS로 변환시 아래와 같아짐
+
+<img src="gitImages\&Children.jpg">
