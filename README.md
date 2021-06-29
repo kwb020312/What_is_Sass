@@ -186,3 +186,14 @@ math.$pi: 0;
 ```
 
 기본적으로 스타일 내부에서도 변수를 선언 및 변경이 가능한데, 기존의 자바스크립트 클로져 구조와 같은 구조를 갖는 전역, 지역 변수를 사용할 수 있다.
+
+```css
+$test: 123
+
+body
+    /* fontSize 123 */
+    font-size: $test
+    $test: 456
+    /* fontSize 456 */
+    font-size: $test
+```
