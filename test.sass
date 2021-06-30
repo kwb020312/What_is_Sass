@@ -1,2 +1,6 @@
-body
-    color: black
+@mixin test($val:0)
+    @if $val == 0
+        color: red
+
+body 
+    @include test()

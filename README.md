@@ -242,3 +242,17 @@ body
 를 하게되면 new.sass파일을 변환했을 때 아래와 같은 결과가 나온다.
 
 <img src="gitImages\import_result.jpg">
+
+## if
+
+if 함수를 사용하는 방법은 mixin 혹은 function에서 볼 수 있다.
+
+```sass
+@mixin test($testVal:0)
+    @if $testVal === 0
+        color: red;
+```
+
+위와 같이 코딩한 후 변환시켜주면 아래와 같이 변환된다.
+
+<img src="gitImages\Sass_If_Result.jpg">
