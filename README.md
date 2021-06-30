@@ -223,3 +223,22 @@ body
 이러한 처리과정을 거치고 난 이후의 결과는 아래와 같다
 
 <img src="gitImages\Forward_Func_Result.jpg">
+
+## import
+
+import 는 use함수와 매우 흡사하며 sass의 코드를 그대로 가져올 때 사용이 가능하다 예를들어
+
+```css
+/* base.sass */
+body
+    color:red;
+```
+
+```css
+/* new.sass */
+@import base;
+```
+
+를 하게되면 new.sass파일을 변환했을 때 아래와 같은 결과가 나온다.
+
+<img src="gitImages\import_result.jpg">
