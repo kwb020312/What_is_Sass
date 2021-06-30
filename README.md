@@ -256,3 +256,22 @@ if 함수를 사용하는 방법은 mixin 혹은 function에서 볼 수 있다.
 위와 같이 코딩한 후 변환시켜주면 아래와 같이 변환된다.
 
 <img src="gitImages\Sass_If_Result.jpg">
+
+## For
+
+Sass에서 if뿐 아니라 for문 또한 사용이 가능하다
+
+@for 변수 from 변수초기값 to 종료조건
+
+```sass
+@mixin test($val:0, $i:0)
+    @for $i from 0 to 5
+        body
+            color: red
+
+@include test()
+```
+
+해당 sass파일을 css로 변환하면 아래와 같이 변환된다.
+
+<img src="gitImages\Sass_For.jpg">
