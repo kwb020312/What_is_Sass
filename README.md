@@ -275,3 +275,5 @@ Sass에서 if뿐 아니라 for문 또한 사용이 가능하다
 해당 sass파일을 css로 변환하면 아래와 같이 변환된다.
 
 <img src="gitImages\Sass_For.jpg">
+
+## Extend
