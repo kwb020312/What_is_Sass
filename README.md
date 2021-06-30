@@ -197,3 +197,29 @@ body
     /* fontSize 456 */
     font-size: $test
 ```
+
+## @forward
+
+forward함수는 모듈을 거쳐갈 수 있도록 도와주는 것이다.
+
+```css
+// Base.sass
+$color: "black";
+```
+
+```css
+// Forward.sass
+@forward "Base";
+```
+
+```css
+// Test.sass
+@use "Forward" as *
+
+body
+    color: $color;
+```
+
+이러한 처리과정을 거치고 난 이후의 결과는 아래와 같다
+
+<img src="gitImages\Forward_Func_Result.jpg">
