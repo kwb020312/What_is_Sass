@@ -314,3 +314,37 @@ body
 위와 같은 코딩을 하고 test의 인자로 a에 더 적은값을 입력한 후 css파일로 변환하면 콘솔에 아래와 같이 출력되며 변환이 취소된다.
 
 <img src="gitImages\@error.jpg">
+
+## @warn
+
+@warn함수는 @error함수와 거의 비슷한 역할을 시행하지만 유일한 차이점은 경고를 할 뿐 sass파일의 반환을 중지시키지 않는다는 점이다.
+
+```sass
+@mixin test($a, $b)
+    @if $a < $b
+        @warn "A Must Bigger Than B"
+
+body
+    @include test(1,2)
+```
+
+위와같이 입력한 후 css파일로 변환시 변환이 되지만 콘솔에 아래와 같이 출력된다
+
+- ※ <i>위 코드의 경우에는 덧씌울 css스타일이 없어서 공백임</i>
+
+<img src="gitImages\@warn.jpg">
+
+## @debug
+
+디버그는 콘솔에 표시를하며 @warn함수와 매우 유사하다,
+
+중요도로 따지자면 @error > @warn > @debug 순이라고 생각하면 편하다.
+
+```sass
+@mixin test($a, $b)
+    @if $a < $b
+        @debug "A Must Bigger Than B"
+
+body
+    @include test(1,2)
+```

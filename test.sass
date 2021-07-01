@@ -1,6 +1,6 @@
 @mixin test($a, $b)
     @if $a < $b
-        @error "A Must Bigger Than B"
+        @debug "A Must Bigger Than B"
 
 body
     @include test(1,2)
