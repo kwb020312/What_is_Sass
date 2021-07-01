@@ -294,3 +294,23 @@ p
 를 적어놓은 후 css파일로 변환시 아래와 같은 결과로 반횐된다.
 
 <img src="gitImages\Extend_Body.jpg">
+
+## @error
+
+@mixin 혹은 @function 을 이용할 때 내가 예상하지 못했던 결과로 오류를 받지 않으려면 어떤식으로 대처해야할까?
+
+@error 함수를 사용하면 된다.
+해당 함수는 뒤에오는 문자열을 출력해주는 역할을 하는데 @if문을 걸어 특수한 상황에 출력해주는 편이 좋다.
+
+```sass
+@mixin test($a, $b)
+    @if $a < $b
+        @error "A Must Bigger Than B"
+
+body
+    @include test(1,2)
+```
+
+위와 같은 코딩을 하고 test의 인자로 a에 더 적은값을 입력한 후 css파일로 변환하면 콘솔에 아래와 같이 출력되며 변환이 취소된다.
+
+<img src="gitImages\@error.jpg">

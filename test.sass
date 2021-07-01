@@ -1,5 +1,6 @@
-body
-    color: red
+@mixin test($a, $b)
+    @if $a < $b
+        @error "A Must Bigger Than B"
 
-p
-    @extend body
+body
+    @include test(1,2)
