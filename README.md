@@ -277,3 +277,20 @@ Sass에서 if뿐 아니라 for문 또한 사용이 가능하다
 <img src="gitImages\Sass_For.jpg">
 
 ## Extend
+
+@extend 함수를 사용하면 자신이 이후에 지목한 셀렉터의 스타일을 그대로 가져온다.
+
+예를 들어
+
+```sass
+/* test.sass */
+body
+    color: red
+
+p
+    @extend body
+```
+
+를 적어놓은 후 css파일로 변환시 아래와 같은 결과로 반횐된다.
+
+<img src="gitImages\Extend_Body.jpg">

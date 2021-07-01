@@ -1,6 +1,5 @@
-@mixin test($val:0, $i:0)
-    @for $i from 0 to 5
-        body
-            color: red
+body
+    color: red
 
-@include test()
+p
+    @extend body
