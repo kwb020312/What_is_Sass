@@ -369,3 +369,19 @@ body
 위의 코드를 입력 시 아래와 같이 반환된다.
 
 <img src="gitImages\@else.jpg">
+
+## @each
+
+JavaScript의 꽃은 객체배열 이라고 볼 수 있는데 배열은 어떻게 사용해야할까??
+
+```css
+$colors: 'red', 'orange', 'yellow'
+
+@each $c in $colors
+    .col_#{$c}
+        color: $c
+```
+
+,로 구분하며 @each는 기존의 JS문법과 동일하다 기존의 문자열에 변수를 할당하고 싶을 때 에는 #{} 로 감싸주면 됨
+
+<img src="gitImages\@each.jpg">
