@@ -348,3 +348,24 @@ body
 body
     @include test(1,2)
 ```
+
+## @else & @else if
+
+if문이 있다면 외의 경우를 포함하는 else와 else if 또한 사용하고 싶을 것이다 앞에 @ 기호를 붙여주면 if문과 같은 문법으로 사용이 가능하며
+
+```sass
+@mixin test()
+    @if false
+        color: red
+    @else if true
+        color: blue
+    @else
+        color: blue
+
+body
+    @include test()
+```
+
+위의 코드를 입력 시 아래와 같이 반환된다.
+
+<img src="gitImages\@else.jpg">

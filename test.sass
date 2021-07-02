@@ -1,6 +1,10 @@
-@mixin test($a, $b)
-    @if $a < $b
-        @debug "A Must Bigger Than B"
+@mixin test()
+    @if false
+        color: red
+    @else if true
+        color: blue
+    @else
+        color: blue
 
 body
-    @include test(1,2)
+    @include test()
