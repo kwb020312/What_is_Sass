@@ -385,3 +385,19 @@ $colors: 'red', 'orange', 'yellow'
 ,로 구분하며 @each는 기존의 JS문법과 동일하다 기존의 문자열에 변수를 할당하고 싶을 때 에는 #{} 로 감싸주면 됨
 
 <img src="gitImages\@each.jpg">
+
+## @while
+
+반복문으로 for문 뿐만이 아닌 while문 또한 사용이 가능하다.
+
+```sass
+@function test($a: 1, $b: 3)
+    @while $a < $b
+        $a: $a + 1
+    @return $a+'px'
+
+body
+    font-size: test()
+```
+
+문법은 JS와 동일하기 때문에 그대로 사용하면 됨
